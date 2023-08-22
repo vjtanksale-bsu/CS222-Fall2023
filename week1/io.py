@@ -5,4 +5,9 @@ def main():
   payRate = float(input("Enter hourly pay rate: "))
   hours = float(input("Enter number of hours worked: "))
   print("$ " + str(payRate * hours))
+  average = float(input("Please enter student's average score: "))
+  if average >= 60:
+    print("Pass")
+  else:
+    print("Fail")
 main()
