@@ -10,4 +10,8 @@ def main():
         total += number
     print(total)
 
+    names = ["Alice", "Bob", "Carol", "Dave", "Eve"]
+    for n in names:
+        print(n)
+
 main()
