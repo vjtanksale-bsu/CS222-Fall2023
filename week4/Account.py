@@ -1,7 +1,7 @@
 class Account():
     def __init__(self, name, balance, password):
         self.name = name
-        self.balance = int(balance)
+        self.balance = float(balance)
         self.password = password
    
     def deposit(self, amountToDeposit, password):
@@ -13,7 +13,7 @@ class Account():
             print('You cannot deposit a negative amount')
             return None
 
-        self.balance = self.balance + amountToDeposit
+        self.balance += amountToDeposit
         return self.balance
         
     def withdraw(self, amountToWithdraw, password):
@@ -29,7 +29,7 @@ class Account():
             print('You cannot withdraw more than you have in your account')
             return None
 
-        self.balance = self.balance - amountToWithdraw
+        self.balance -= amountToWithdraw
         return self.balance
 
     def getBalance(self, password):
@@ -46,16 +46,19 @@ class Account():
 
 def main():
     alice = Account("Alice Jones", 2000, "password")
-    alice.show()
+    bob = Account("Bob Smith", 1000, "ballstate")
+    customers = [alice, bob]
+    customers[1].show()
+    #alice.show()
     alice.deposit(1000,"passwrd")
-    alice.show()
+    #alice.show()
     alice.deposit(1000, "password")
-    alice.show()
+    #alice.show()
     alice.withdraw(-1000, "password")
-    alice.show()
+    #alice.show()
     alice.withdraw(5000, "password")
-    alice.show()
+    #alice.show()
     alice.withdraw(500, "password")
-    alice.show()
+    #alice.show()
 
 main()

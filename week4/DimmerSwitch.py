@@ -23,9 +23,11 @@ class DimmerSwitch():
 
 def main():
     d0 = DimmerSwitch()
+    d1 = DimmerSwitch()
     d0.turnOn()
-    d0.show()
+    #d0.show()
     for count in range(5):
         d0.raiseLevel()
     d0.show()
+    d1.show()
 main()

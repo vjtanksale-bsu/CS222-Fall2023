@@ -12,10 +12,15 @@ class LightSwitch():
 
 def main():
     l0 = LightSwitch()
+    l1 = LightSwitch()
+    l2 = LightSwitch()
+    l2.turnOn()
     print(l0.switchIsOn)
     l0.turnOn()
     print(l0.switchIsOn)
     l0.turnOff()
     print(l0.switchIsOn)
+    print(l1.switchIsOn)
+    print(l2.switchIsOn)
 
 main()

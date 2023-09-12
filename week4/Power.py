@@ -1,11 +1,4 @@
-from ast import Pow
-from contextlib import nullcontext
-from lib2to3.pgen2.token import NUMBER
-
-
 class Power(object):
-
- 
     default_exponent = 2
  
     def __init__(self, exponent=default_exponent):
@@ -25,7 +18,9 @@ class RealPower(Power):
 def main():
     number0 = Power(5)
     print(number0.of(3))
-    number1 = RealPower(1/3)
-    print(number1.of(-3.5))
+    number2 = Power()
+    print(number2.of(10))
+    number1 = RealPower(1/2)
+    print(number1.of(-3))
 
 main()
